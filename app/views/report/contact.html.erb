@@ -1,2 +1,8 @@
-<h1>Report#contact</h1>
-<p>Find me in app/views/report/contact.html.erb</p>
+<h1>Report an Urgent Service Outage</h1>
+<h2>Requester: <%= current_user.email %></h2>
+
+<%= simple_form_for @report, :url => url_for(:action => 'submit'), :method => 'post' do |f| %>
+  <%= f.association :service %>
+  <%= f.input :reproduce %>
+  <%= f.button :submit %>
+<% end %>

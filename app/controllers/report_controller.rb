@@ -3,5 +3,23 @@ class ReportController < ApplicationController
   before_filter :authenticate_user!
 
   def contact
+    @report = Report.new
+  end
+
+  def submit
+
+    @report = Report.new(report_params)
+    @report.user = current_user
+    if @report.save
+      redirect_to action: 'contact', flash: "Communication Initiated"
+    else
+      redirect_to action: 'contact', flash: "A Failure Occurred"
+    end
+  end
+
+  private
+
+  def report_params
+    params.require(:report).permit(:service_id, :reproduce)
   end
 end
