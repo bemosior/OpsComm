@@ -11,6 +11,7 @@ class ReportController < ApplicationController
     @report = Report.new(report_params)
     @report.user = current_user
     if @report.save
+      NotificationMailer.notification_email(@report).deliver
       redirect_to action: 'contact', flash: "Communication Initiated"
     else
       redirect_to action: 'contact', flash: "A Failure Occurred"
