@@ -9,7 +9,7 @@ RailsAdmin.config do |config|
   config.current_user_method(&:current_user)
 
   config.authorize_with do 
-    redirect_to root_path unless warden.user.admin? 
+    redirect_to '/' unless warden.user.admin? 
   end
 
   ## == Cancan ==
