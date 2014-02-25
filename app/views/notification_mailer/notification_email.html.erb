@@ -6,6 +6,6 @@
   <body>
     <h1>Reported System Outage: <%= @report.service.name %></h1>
     <h3>Reporter: <%= @report.user.name %> (<%= @report.user.email %>)</h3>
-    <p><%= @report.reproduce %></p>
+    <p><%= simple_format(@report.reproduce) %></p>
   </body>
 </html>
