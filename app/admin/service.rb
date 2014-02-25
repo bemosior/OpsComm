@@ -5,6 +5,17 @@ ActiveAdmin.register Service do
       params.permit!
     end
   end
+
+  form :html => { :enctype => "multipart/form-data" } do |f|
+    f.inputs "Services" do
+      f.input :name
+    end
+    f.inputs "Contacts" do
+      f.input :contact
+    end
+    f.actions
+  end
+
   
   # See permitted parameters documentation:
   # https://github.com/gregbell/active_admin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
