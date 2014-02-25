@@ -5,8 +5,8 @@
     <h3>Requester: <%= current_user.name %></h3>
 
     <%= simple_form_for @report, :url => url_for(:action => 'submit'), :method => 'post' do |f| %>
-      <%= f.association :service %>
-      <%= f.input :reproduce %>
+      <%= f.association :service, :required => true %>
+      <%= f.input :reproduce, :required => true %>
       <%= f.button :submit %>
     <% end %>
 
