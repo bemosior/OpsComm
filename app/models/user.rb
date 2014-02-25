@@ -14,5 +14,4 @@ class User < ActiveRecord::Base
   def get_ldap_name
     self.name = Devise::LDAP::Adapter.get_ldap_param(self.login,"name").first
   end
-
 end
