@@ -6,7 +6,7 @@
 
     <%= simple_form_for @report, :url => url_for(:action => 'submit'), :method => 'post' do |f| %>
       <%= f.association :service, :required => true %>
-      <%= f.input :reproduce, :required => true %>
+      <%= f.input :reproduce, :required => true, input_html: {value: "1)\n\n2)\n\n3)"} %>
       <%= f.button :submit %>
     <% end %>
 

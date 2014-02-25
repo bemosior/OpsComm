@@ -1193,4 +1193,11 @@
 
 // $include-html-visibility-classes: $include-html-classes;
 
+
+
 @import 'foundation';
+
+
+textarea {
+    min-height:150px;
+}
