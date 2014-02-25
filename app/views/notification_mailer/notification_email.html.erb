@@ -4,8 +4,8 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>Systems Emergency: <%= @report.service.name %></h1>
-    <h2>Reporter: <%= @report.user.email %></h2>
+    <h1>Reported System Outage: <%= @report.service.name %></h1>
+    <h3>Reporter: <%= @report.user.name %> (<%= report.user.email %>)</h3>
     <p><%= @report.reproduce %></p>
   </body>
 </html>

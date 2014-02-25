@@ -1,4 +1,4 @@
-Systems Emergency: <%= @report.service.name %>
-Reporter: <%= @report.user.email %>
+Reported System Outage: <%= @report.service.name %>
+Reporter: <%= @report.user.name %> (<%= report.user.email %>)
 
 <%= @report.reproduce %>
