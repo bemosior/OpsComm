@@ -12,7 +12,8 @@
   </head>
 
   <body>
-
+    <%= render :partial => "layouts/navigation_links" %>
+    <br/>
     <%= yield %>
     <%= javascript_include_tag "application" %>
   </body>
