@@ -11,7 +11,7 @@ ActiveAdmin.register Service do
       f.input :name
     end
     f.inputs "Contacts" do
-      f.input :contact
+      f.input :contact, collection: Contact.order('name ASC'), input_html: {size: 15}
     end
     f.actions
   end
