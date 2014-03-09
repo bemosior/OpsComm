@@ -1,5 +1,5 @@
 OpsComm::Application.routes.draw do
-  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+  ActiveAdmin.routes(self)
   devise_for :users
   get 'report', to: 'report#contact'
   post 'report', to: 'report#submit'
