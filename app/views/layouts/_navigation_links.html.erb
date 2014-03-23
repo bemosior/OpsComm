@@ -1,0 +1,19 @@
+<nav class="top-bar" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><%= link_to 'Outage Reports', root_url %></h1>
+    </li>
+  </ul>
+  <section class="top-bar-section">
+    <ul class="left">
+      <% if user_signed_in? %>
+        <% if current_user.admin? %>
+          <li><%= link_to 'Admin', 'admin' %></li>
+        <% end %>
+        <li><%= link_to 'Logout', destroy_user_session_path, :method => :delete %></li>
+      <% else %>
+        <li><%= link_to 'Login', new_user_session_path %></li>
+      <% end %>
+    </ul>
+  </section>
+</nav>
