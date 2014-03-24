@@ -1,0 +1,15 @@
+@import 'bootstrap';
+@import 'bootsy';
+
+label {
+	margin-right: 10px;
+}
+
+.wysihtml5-sandbox {
+	width: 100% !important;
+	height: 250px !important;
+}
+
+.bootsy small {
+	display: none;
+}

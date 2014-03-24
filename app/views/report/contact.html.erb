@@ -1,14 +1,9 @@
-<div class="row">
-  <div class="small-8 small-centered columns">
-    <%= render :partial => "application/flashes" %>
-    <h1>Report a Service Outage</h1>
-    <h3>Requester: <%= current_user.name %></h3>
+<h2>Report a Service Outage</h2>
+<h3>Requester: <%= current_user.name %></h3>
 
-    <%= simple_form_for @report, :url => url_for(:action => 'submit'), :method => 'post' do |f| %>
-      <%= f.association :service, required: true, collection: Service.order('name ASC') %>
-      <%= f.input :reproduce, :required => true, input_html: {placeholder: "I can reproduce the problem by..."} %>
-      <%= f.button :submit %>
-    <% end %>
-
-  </div>
-</div>
+<%= simple_form_for @report, :url => url_for(:action => 'submit'), :method => 'post' do |f| %>
+  <%= f.association :service, required: true, collection: Service.order('name ASC'), label: 'Affected Service:' %>
+  <br/>
+  <%= f.input :reproduce, required: true, as: :bootsy, label: false %>
+  <%= f.button :submit %>
+<% end %>

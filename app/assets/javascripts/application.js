@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require foundation
+//= require bootstrap
+//= require bootsy
 //= require_tree .
-
-$(function(){ $(document).foundation(); });
