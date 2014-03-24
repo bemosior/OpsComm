@@ -14,13 +14,13 @@ Bootsy.setup do |config|
 
   # Image versions available
   # Possible values: :small, :medium, :large and/or :original
-  config.image_versions_available = [:small, :medium, :large, :original]
+  config.image_versions_available = [:small, :large]
 
 
   # SMALL IMAGES
 
   # Width limit for small images
-  # config.small_image[:width] = 160
+  config.small_image[:width] = 200
 
   # Height limit for small images
   # config.small_image[:height] = 160
@@ -41,7 +41,7 @@ Bootsy.setup do |config|
   # config.large_image[:width] = 760
 
   # Height limit for large images
-  # config.large_image[:height] = 760
+  config.large_image[:height] = 760
 
 
   # Whether user can destroy uploaded files
