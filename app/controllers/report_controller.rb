@@ -16,7 +16,7 @@ class ReportController < ApplicationController
     @report.user = current_user
 
     if @report.save and NotificationMailer.notification_email(@report).deliver
-      flash[:notice] = "Communication Initiated"
+      flash[:notice] = "Communication initiated. You will receive an email shortly."
       redirect_to action: 'contact'
     else
       flash[:alert] = "Please fill out all fields."
