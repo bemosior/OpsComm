@@ -6,7 +6,7 @@
 
     <%= simple_form_for @report, :url => url_for(:action => 'submit'), :method => 'post' do |f| %>
       <%= f.association :service, required: true, collection: Service.order('name ASC') %>
-      <%= f.input :reproduce, :required => true, input_html: {placeholder: "I can reproduce the problem by..."} %>
+      <%= f.input :reproduce, :required => true, as: :bootsy %>
       <%= f.button :submit %>
     <% end %>
 

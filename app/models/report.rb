@@ -1,4 +1,5 @@
 class Report < ActiveRecord::Base
+  include Bootsy::Container
   belongs_to :user
   belongs_to :service
 

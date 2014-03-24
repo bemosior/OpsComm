@@ -27,6 +27,6 @@ class ReportController < ApplicationController
   private
 
   def report_params
-    params.require(:report).permit(:service_id, :reproduce)
+    params.require(:report).permit(:service_id, :reproduce, :bootsy_image_gallery_id)
   end
 end
